@@ -1,3 +1,4 @@
+require 'pry'
 class Artist 
   
   attr_accessor :name 
@@ -33,10 +34,11 @@ class Artist
   
   def self.find_or_create_by_name(name_from_file)
     
-    @@all.find do | song_inst |
+    @@all.each do | song_inst |
       if song_inst.name != name_from_file 
         self.new(name_from_file)
       end
+      
     end
     
     return self.new(name_from_file)
