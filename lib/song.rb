@@ -19,7 +19,7 @@ class Song
     
     song = self.new(data[1])
     
-    song.artist_name.name = data[0]
+    song.artist_name = data[0]
     
     song
     
